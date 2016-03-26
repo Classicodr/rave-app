@@ -41,9 +41,9 @@ Config::addArray([
             'test' => [
                 'driver' => 'MySQLPDO',
                 'host' => 'localhost',
-                'database' => 'my_app',
-                'login' => 'my_app',
-                'password' => 'secret',
+                'database' => 'test',
+                'login' => 'root',
+                'password' => '',
                 /**
                  * Uncomment if the datasource is not on the default port
                  */
