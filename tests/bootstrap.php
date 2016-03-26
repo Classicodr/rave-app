@@ -35,6 +35,27 @@ define('APP', ROOT . DS . 'app' . DS);
 
 require_once ROOT . '/vendor/autoload.php';
 
-Config::addArray(require ROOT . '/config/app.php');
+Config::addArray([
+        'debug' => true,
+        'datasources' => [
+            'test' => [
+                'driver' => 'MySQLPDO',
+                'host' => 'localhost',
+                'database' => 'my_app',
+                'login' => 'my_app',
+                'password' => 'secret',
+                /**
+                 * Uncomment if the datasource is not on the default port
+                 */
+                //'port'=> 'non_standart_port_number'
+            ]
+        ],
+        'error' => [
+            '500' => '/internal-server-error',
+            '404' => '/not-found',
+            '403' => '/forbidden'
+        ],
+    ]
+);
 
 DB::set(DriverFactory::get('test'));
