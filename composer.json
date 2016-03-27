@@ -1,7 +1,6 @@
 {
   "name": "classicodr/rave-app",
   "description": "App skeleton of the RaveFramework",
-  "minimum-stability": "alpha",
   "license": "GNU GPLv3",
   "authors": [
     {
@@ -12,7 +11,7 @@
     }
   ],
   "require": {
-    "classicodr/rave-core": "*"
+    "classicodr/rave-core": "*@alpha"
   },
   "repositories": [
     {
