@@ -24,17 +24,24 @@ use rave\core\DB;
 /**
  * Some useful constants
  */
-
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__DIR__));
 define('APP', ROOT . DS . 'app' . DS);
 
 /**
- * Include the autoloader
+ * Includes the autoloader
  */
-
 require_once ROOT . '/vendor/autoload.php';
 
+/**
+ * You can add multiple config files using addArray()
+ */
 Config::addArray(require 'app.php');
 
+/**
+ * By default, the application uses the default datasource
+ *
+ * You can use only one datasource at the time
+ */
+//BD::set(DriverFactory::get($custom_name));
 DB::set(DriverFactory::get());

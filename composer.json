@@ -12,7 +12,7 @@
     }
   ],
   "require": {
-    "classicodr/rave-core": "master-dev"
+    "classicodr/rave-core": "*"
   },
   "repositories": [
     {
@@ -31,7 +31,7 @@
   "autoload-dev": {
     "psr-4": {
       "app\\tests\\": "tests/app",
-      "rave\\Tests\\": "vendor/classicodr/rave-core/tests"
+      "rave\\tests\\": "vendor/classicodr/rave-core/tests"
     }
   }
 }

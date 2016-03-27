@@ -19,8 +19,14 @@
 
 namespace app\controller;
 
-class Main extends FrontEndController
+use rave\core\Controller;
+
+class Main extends Controller
 {
+    public function __construct()
+    {
+        $this->setLayout('frontend');
+    }
 
     public function index()
     {
